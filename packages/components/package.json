@@ -1,0 +1,16 @@
+{
+  "name": "@vueapps/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-plus": "^2.9.5"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./Button": "./basic/Button/Button.vue"
+  }
+}

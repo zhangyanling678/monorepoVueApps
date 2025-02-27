@@ -1,0 +1,48 @@
+{
+	"scripts": {
+		"app1:dev": "pnpm -F @vueapps/app1 run dev",
+		"app1:build": "pnpm -F @vueapps/app1 run build",
+		"app2:dev": "pnpm -F @vueapps/app2 run dev",
+		"app2:build": "pnpm -F @vueapps/app2 run build",
+		"prepare": "husky install",
+		"preinstall": "npx only-allow yarn"
+	},
+	"dependencies": {
+		"vue": "^3.5.13"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "17.0.3",
+		"@commitlint/config-conventional": "17.0.3",
+		"@typescript-eslint/eslint-plugin": "5.30.7",
+		"@typescript-eslint/parser": "5.30.7",
+		"@vitejs/plugin-vue": "^5.2.1",
+		"@vue/tsconfig": "^0.7.0",
+		"eslint": "7.32.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-simple-import-sort": "7.0.0",
+		"eslint-plugin-vue": "7.15.1",
+		"husky": "8.0.0",
+		"lint-staged": "13.0.3",
+		"prettier": "2.7.1",
+		"stylelint": "13.13.1",
+		"stylelint-config-prettier": "8.0.2",
+		"stylelint-config-rational-order": "0.1.2",
+		"stylelint-prettier": "1.2.0",
+		"typescript": "^5.7.3",
+		"vite": "^6.2.0",
+		"vue-tsc": "^2.2.4"
+	},
+	"lint-staged": {
+		"*.{vue,ts,js}": [
+			"prettier --write",
+			"eslint --fix",
+			"ls-lint"
+		],
+		"*.{vue,less,scss}": [
+			"prettier --write",
+			"stylelint --quiet --fix",
+			"ls-lint"
+		]
+	}
+}

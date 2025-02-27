@@ -1,0 +1,12 @@
+{
+  "name": "@vueapps/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "exports": {
+    "./getAge": "./getAge.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
